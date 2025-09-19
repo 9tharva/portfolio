@@ -1,64 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atharva Chandratre | Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header { background: #111; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5em; }
-    header p { font-size: 1.2em; color: #ddd; }
-    nav { background: #222; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; }
-    .btn { display: inline-block; padding: 10px 20px; background: #0073e6; color: #fff; text-decoration: none; border-radius: 5px; }
-    footer { background: #111; color: #ddd; text-align: center; padding: 20px; }
+    /* --- Global Styles --- */
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; scroll-behavior: smooth; }
+    h2 { border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-bottom: 20px; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; }
+
+    /* --- Header / Hero --- */
+    header { background: #111; color: #fff; text-align: center; padding: 80px 20px; }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; color: #ddd; margin-bottom: 20px; }
+    .btn { display: inline-block; padding: 10px 20px; margin: 10px; background: #0073e6; color: #fff; border-radius: 5px; }
+
+    /* --- Navbar --- */
+    nav { position: sticky; top: 0; background: #222; padding: 10px; text-align: center; z-index: 100; }
+    nav a { color: #fff; margin: 0 15px; font-weight: bold; }
+    nav a:hover { color: #0073e6; }
+
+    /* Profile Picture */
+    .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;   /* makes it circular */
+    border: 3px solid #fff;
+    margin-bottom: 20px;
+    object-fit: cover;    /* keeps face centered */
+    }
+
+    /* --- Contact Icons --- */
+    .contact-icons { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+    .contact-icons a { font-size: 2em; color: #000; transition: color 0.3s; }
+    .contact-icons a:hover { color: #555; }
+
+    /* --- Footer --- */
+    footer { background: #111; color: #ddd; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
-  <header>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <img src="profile.png" alt="Atharva Chandratre" class="profile-pic">
     <h1>Atharva Hemant Chandratre</h1>
-    <p>Engineering Student | Data & AI Enthusiast | Problem Solver</p>
-    <a href="resume.pdf" class="btn">Download Resume</a>
+    <p>Engineering Student | AI/ML + Embedded Systems Enthusiast | Problem Solver</p>
+    <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+    <a href="#contact" class="btn">Contact Me</a>
   </header>
-  
+
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a third-year Electronics & Telecommunication Engineering student at Mumbai University, with interests in AI/ML, Computer Networks, and Software Development. Passionate about solving real-world problems through technology.</p>
+    <p>
+      Hi, I’m <strong>Atharva Chandratre</strong>, a third-year Electronics and Telecommunication 
+      Engineering student at Mumbai University. I’m passionate about applying 
+      technology to solve real-world problems, with a focus on 
+      <strong>Artificial Intelligence, Machine Learning, Embedded Systems, and Computer Networks</strong>.
+    </p>
+    <p>
+      Beyond academics, I actively participate in <strong>hackathons and research projects</strong>, 
+      where I work on solutions ranging from AI-driven agriculture to air quality monitoring. 
+      I enjoy building innovative software and hardware that creates a meaningful impact.
+    </p>
+    <p>
+      I’m currently seeking opportunities in <strong>software development, AI/ML, embedded systems, and hardware design</strong>, 
+      where I can contribute, learn, and grow while solving challenging problems.
+    </p>
   </section>
 
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Expertise:</strong> Digital Electronics, VLSI, Embedded Systems, Communication Systems</p>
+    <p><strong>Programming:</strong> C, C++, Python, Verilog, MATLAB, Data Science</p>
+    <p><strong>Tools:</strong> Xilinx, Arduino, Multisim, Proteus, Git</p>
+    <p><strong>Operating Systems:</strong> Windows</p>
+  </section>
+
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>AI-based Crop Recommendation</strong> – Machine learning model for farmers (GitHub link).</li>
-      <li><strong>Air Quality Monitoring with AI</strong> – Hackathon project using satellite + ML.</li>
-      <li><strong>Portfolio Website</strong> – You’re looking at it 😉</li>
+      <li><strong>Morse Code Transmitter/Receiver (FPGA)</strong> – Real-time Morse encoder/decoder using FPGA.</li>
+      <li><strong>Radar System (Arduino)</strong> – Ultrasonic-based radar with visualization interface.</li>
+      <li><strong>ESP32 Surveillance Vehicle</strong> – Remote-controlled with live video streaming.</li>
+      <li><strong>AI-based Crop Recommendation</strong> – ML model for farmers (Hackathon project).</li>
+      <li><strong>AI-driven Air Quality Monitoring</strong> – Satellite + ML approach (Hackathon project).</li>
     </ul>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <p>Python, MATLAB, Git, AI/ML, Computer Networks, Embedded Systems.</p>
+  <!-- Research -->
+  <section id="research">
+    <h2>Research & Papers</h2>
+    <p><strong>Paper:</strong> Technologies Used to Maintain Human Health in Space Research and Exploration Programs</p>
+    <p><strong>Conference:</strong> ICTEAH 2025 – K. J. Somaiya School of Engineering</p>
   </section>
 
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience & Volunteering</h2>
+    <h3>Internships</h3>
+    <ul>
+      <li><strong>Technohacks EduTech (Feb 2024):</strong> Built responsive web pages with HTML/CSS/JS; learned Git + hosting.</li>
+      <li><strong>Western Railways (Jan 2025):</strong> Hands-on with SG & LSG coach systems, electrical maintenance, circuits.</li>
+      <li><strong>Prodigy infotech (July 2025):</strong> Applied data analysis, visualization, and ML techniques to extract insights and build predictive models.</li>
+    </ul>
+    <h3>Certifications</h3>
+    <ul>
+      <li>Cisco CCNA Lab Options</li>
+      <li>C Training Certificate</li>
+      <li>C++ Training Certificate</li>
+      <li>Full-Stack Web Development</li>
+      <li>Python Programming Masterclass</li>
+    </ul>
+    <h3>Leadership & Volunteering</h3>
+    <ul>
+      <li>Member – I & E Cell</li>
+      <li>Organizer – TechFest 2023, 2024</li>
+      <li>NSS Volunteer – Cleanups, school visits, plantations</li>
+      <li>Member – Ahimsa NGO (Malegaon)</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:atharvachandratre11@gmail.com">atharvachandratre11@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/atharva-chandratre-860632263/">linkedin.com/in/your-link</a></p>
-    <p>GitHub: <a href="https://github.com/your-9tharva">github.com/your-username</a></p>
+    <div class="contact-icons">
+      <a href="mailto:atharvachandratre11@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/atharva-chandratre-860632263/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="tel:+919322183924"><i class="fas fa-phone"></i></a>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Atharva Chandratre | Made with ❤️</p>
+    <p>© 2025 Atharva Chandratre</p>
   </footer>
+
 </body>
 </html>
